@@ -1,0 +1,19 @@
+{
+    "name" : "Select&Translate",
+    "version" : "1.0",
+    "description" : "A chrome extension that translates the text you selected",
+    "background" : {
+        "scripts" : [ "background/script.js" ],
+        "persistent" : false
+    },
+    "browser_action" : {
+        "defualt_popup" : "popup/index.html"
+    },
+    "content_scripts" : [
+        {
+            "matches" : [ "<all_urls>" ],
+            "js" : [ "content-script/script.js" ]
+        }
+    ],
+    "manifest_version" : 2
+}

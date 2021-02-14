@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        #mirror {
+            border: 3px solid black;
+        }
+    </style>
+    <script>
+        document.addEventListener('selectionchange', () => {
+            let mirrorText = document.getElementById("mirror-text");
+            mirrorText.innerHTML = window.getSelection().toString();
+        });
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tortor velit, sodales ut ligula in, auctor cursus metus. Nullam sit amet orci ligula. Donec accumsan sem nec purus euismod, eget faucibus nulla rutrum. Integer hendrerit, sapien nec vulputate volutpat, justo nunc hendrerit nisi, at facilisis felis lacus et magna. Praesent posuere metus et neque vehicula, sit amet facilisis velit auctor. Mauris nec dolor venenatis, porttitor diam nec, tincidunt eros. Maecenas facilisis, dui vel mollis semper, augue purus pellentesque lacus, vitae pretium leo velit non massa. Quisque nec dictum neque. Donec sagittis mi rhoncus vehicula vehicula. In id lobortis metus. Phasellus pharetra ante at dignissim facilisis. Nam et bibendum nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Integer condimentum dolor hendrerit magna finibus, at tincidunt enim posuere. Duis rutrum, leo nec sollicitudin suscipit, est tellus venenatis neque, sed faucibus risus diam a quam. Donec gravida sit amet purus fringilla dictum. Maecenas venenatis in est non tristique. Nulla ante eros, cursus at metus id, pellentesque laoreet tellus. Nam neque orci, tempor ut nulla vitae, blandit rhoncus orci. Sed et orci sit amet ipsum suscipit lacinia et sit amet lorem. Curabitur aliquam diam vitae turpis gravida, a suscipit nisl sollicitudin. Curabitur sit amet tempus quam, sit amet blandit erat. Etiam sit amet risus in ipsum commodo sodales rhoncus eu nisi. Phasellus ornare porta mi id cursus.</p>
+    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sit amet maximus ex, eu ullamcorper eros. Ut vel purus ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris sed sollicitudin elit. Vivamus sollicitudin dolor blandit sem hendrerit dignissim. Nam lobortis dictum orci, in venenatis lectus pharetra vitae. Sed est augue, varius a lobortis id, scelerisque rutrum mi. Proin purus dolor, sollicitudin vitae condimentum et, pharetra vitae eros. Morbi id faucibus neque. Nunc vitae tellus varius, hendrerit arcu eget, efficitur diam. Proin vel sem dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>Quisque eleifend sit amet diam a auctor. Nulla nec nisi in erat fringilla euismod at sed enim. Praesent malesuada sem ante, nec pharetra purus pellentesque eget. Integer eleifend nisl ipsum, sit amet ullamcorper ipsum finibus rhoncus. Fusce in nisl nec dolor semper malesuada. Maecenas enim turpis, consequat at pellentesque aliquet, euismod quis mauris. Proin elit tellus, semper eget lacus non, egestas eleifend arcu.</p>
+    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas suscipit felis et gravida interdum. Curabitur rutrum justo sit amet consequat mollis. Suspendisse sagittis ligula ullamcorper nibh interdum tristique. Integer viverra nibh quis arcu auctor commodo. Nulla facilisi. Morbi ultricies arcu venenatis euismod eleifend. Sed gravida fringilla magna, sit amet tincidunt est rutrum vel. Aenean porttitor enim enim. Mauris at ligula id lectus accumsan volutpat in id diam. Vivamus quis orci vitae lacus ultricies condimentum sed vel sapien. In facilisis tellus commodo lorem congue laoreet vel a augue.</p>
+    <div id="mirror" width="500" height="300">
+        <p id="mirror-text"></p>
+    </div>
+</body>
+</html>

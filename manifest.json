@@ -7,7 +7,9 @@
         "persistent" : false
     },
     "browser_action" : {
-        "defualt_popup" : "popup/index.html"
+        "default_title" : "Select&Translate",
+        "default_popup" : "popup/index.html",
+        "default_icon": "images/hello_extensions.png"
     },
     "content_scripts" : [
         {

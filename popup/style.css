@@ -1,0 +1,12 @@
+html {
+    width : 300px;
+    height : 400px;
+}
+
+body {
+    padding : 10px;
+}
+
+thead {
+    text-align : center;
+}

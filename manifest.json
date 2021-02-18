@@ -2,6 +2,7 @@
     "name" : "Select&Translate",
     "version" : "1.0",
     "description" : "A chrome extension that translates the selected text",
+    "permissions" : [ "storage" ],
     "background" : {
         "scripts" : [ "background/script.js" ],
         "persistent" : false
@@ -17,5 +18,13 @@
             "js" : [ "js/jquery-3.5.1.min.js", "content-script/script.js" ]
         }
     ],
+    "commands" : {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+T",
+                "mac": "MacCtrl+T"
+            }
+        }
+    },
     "manifest_version" : 2
 }

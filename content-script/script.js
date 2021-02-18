@@ -7,19 +7,23 @@ window.onload = () => {
         }
 
         selectionEndTimeout = setTimeout(function () {
-            $(window).trigger('selectionend');
+            let event = new Event('selection-end');
+            window.dispatchEvent(event);
         }, 1000);
     };
-    $(window).bind('selectionend', function () {
+    window.addEventListener('selection-end', function () {
         selectionEndTimeout = null;
 
         let selectedText = window.getSelection().toString();
-        chrome.runtime.sendMessage(chrome.runtime.id,
-            {
+        if (selectedText) {
+            let data = {
                 type : "selection",
                 action : "change",
                 data : selectedText
-            }
-        );
-    })
+            };
+            chrome.runtime.sendMessage(data, function () {
+                console.log("Select&Translate : translated the selected text");
+            });
+        }
+    });
 };
